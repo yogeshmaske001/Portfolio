@@ -1,0 +1,131 @@
+.myworkspage {
+  background-color: #f0f0f0;
+  min-height: 110vh; /* Changed from height to min-height to allow content to expand */
+  text-align: center;
+  font-family: Calibri;
+}
+
+/* Ensure Navbar takes its space and content below fills the rest (adjust if Navbar is not a direct child or has a different class) */
+
+.myworkspage h1 { /* Assuming there's an h1 for "My Works" */
+  margin-bottom: 30px; /* Add space below the main heading */
+  font-size: 2.5rem; /* Default font size for heading */
+}
+
+.projectscontainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow projects to wrap to the next line */
+  gap: 45px;
+  justify-content: center; /* Center projects horizontally */
+  align-items: flex-start; /* Align items to the start of the cross axis (top) */
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container itself */
+  padding: 0 10px; /* Add horizontal padding to the container */
+}
+
+.project {
+  background-color: aliceblue;
+  padding: 10px; /* Increased padding slightly for better look */
+  border-radius: 10px;
+  width: 250px; /* Fixed width for desktop */
+  height: 250px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex; /* Use flex for content inside project card */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-evenly; /* Distribute space between items */
+  text-align: left; /* Align text left within the project card */
+  transition: all 0.3s ease-in-out; /* Add transition for hover effect */
+}
+
+.project:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* More prominent shadow on hover */
+}
+
+.projectname {
+  color: goldenrod;
+  font-size: 1.2rem; /* Adjust font size for project name */
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px; /* Space between paragraphs */
+  font-size: 0.95rem;
+}
+
+.prolink {
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make links bold */
+}
+
+.linkboldtxt {
+  font-weight: bold;
+  color: black;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
+@media (max-width: 1024px) {
+  .projectscontainer {
+    gap: 30px; /* Reduce gap between projects */
+    padding: 0 15px;
+  }
+  .project {
+    width: calc(50% - 30px); /* Two projects per row with gap consideration */
+    max-width: 350px; /* Prevent projects from becoming too wide */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 280px; /* Ensure a minimum height */
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait mode and large phones) */
+@media (max-width: 768px) {
+
+  .myworkspage h1 {
+    font-size: 2rem; /* Adjust heading size */
+    margin-bottom: 25px;
+  }
+  .projectscontainer {
+    flex-direction: column; /* Stack projects vertically */
+    gap: 25px; /* Adjust gap for vertical stacking */
+    padding: 0; /* Remove horizontal padding as items are stacked */
+  }
+  .project {
+    width: 90%; /* Make projects take more width */
+    max-width: 400px; /* Limit max width for readability */
+    margin: 0 auto; /* Center individual projects */
+    height: auto; /* Ensure height adjusts */
+    min-height: 250px; /* Maintain a good minimum height */
+    padding: 12px;
+  }
+  .projectname {
+    font-size: 1.1rem;
+  }
+  .project p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .myworkspage{
+    padding-bottom:20px ;
+  }
+  .myworkspage h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+    margin-bottom: 20px;
+  }
+  .project {
+    width: 80%; /* Take almost full width on very small screens */
+    min-height: 220px; /* Smaller minimum height */
+    padding: 10px;
+  }
+  .projectname {
+    font-size: 1rem;
+  }
+  .project p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,204 @@
+/* .skills-container{
+  background-color: #f0f0f0;
+  padding-bottom:30px;
+  font-family:Calibri;
+  text-align: center;
+}
+.skillbox{
+  width: 120px;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding:15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skillscontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.skillimg{
+  width: 80px;
+  height: 80px;
+}
+.skillimgtwcss{
+  width: 80px;
+  height: 50px;
+}
+.skillimgbs{
+  width: 80px;
+  height: 70px;
+}
+.skillimgsql{
+  width: 80px;
+  height: 50px;
+}
+.skillboxcontainer{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+} */
+
+
+
+
+.skills-container {
+  background-color: #f0f0f0;
+  min-height: 110vh;
+  font-family: Calibri;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.skills-container h1 { 
+  font-size: 2.5rem; 
+}
+
+.skillscontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.skillboxcontainer {
+  display: flex;
+  gap: 30px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  width: 100%;
+}
+
+.skillbox {
+  width: 120px; /* Fixed width for desktop */
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 15px;
+  /* margin-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.skillbox:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.skillbox h3 {
+  margin-top: 10px; /* Space between image and skill name */
+  font-size: 1rem; /* Default font size for skill name */
+}
+
+.skillimg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Ensure images fit within their bounds without distortion */
+}
+.skillimgtwcss {
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+.skillimgbs {
+  width: 80px;
+  height: 70px;
+  object-fit: contain;
+}
+.skillimgsql {
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
+@media (max-width: 1024px) {
+  .skills-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  .skillscontainer {
+    gap: 30px; /* Reduce gap between skill sections */
+  }
+  .skillboxcontainer {
+    gap: 25px; /* Reduce gap between skill boxes */
+  }
+  .skillbox {
+    width: 110px; /* Slightly smaller width for skill boxes */
+    padding: 12px;
+  }
+  .skillimg, .skillimgtwcss, .skillimgbs, .skillimgsql {
+    width: 70px; /* Slightly smaller images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .skillbox h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait mode and large phones) */
+@media (max-width: 768px) {
+  .skills-container h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  .skillscontainer {
+    gap: 25px;
+  }
+  .skillboxcontainer {
+    gap: 20px; /* Further reduce gap */
+  }
+  .skillbox {
+    width: calc(50% - 20px); /* Two skill boxes per row, accounting for gap */
+    max-width: 150px; /* Prevent them from becoming too wide on larger mobile screens */
+    padding: 10px;
+  }
+  .skillimg, .skillimgtwcss, .skillimgbs, .skillimgsql {
+    width: 60px; /* Smaller images */
+    height: auto;
+  }
+  .skillbox h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .skillscontainer{
+    padding-bottom: 10px;
+  }
+  .skills-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .skillscontainer {
+    gap: 20px;
+  }
+  .skillboxcontainer {
+    gap: 15px; /* Smallest gap */
+  }
+  .skillbox {
+    width: calc(50% - 15px); /* Still two per row, but narrower */
+    max-width: 130px;
+    padding: 8px;
+  }
+  .skillimg, .skillimgtwcss, .skillimgbs, .skillimgsql {
+    width: 50px; /* Smallest images */
+    height: auto;
+  }
+  .skillbox h3 {
+    font-size: 0.8rem;
+  }
+}

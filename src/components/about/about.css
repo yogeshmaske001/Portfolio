@@ -1,0 +1,116 @@
+.aboutpage {
+  background-color: #f0f0f0;
+}
+.container {
+  font-family: Calibri;
+}
+.goldcolortext {
+  color: goldenrod;
+}
+.aboutcontent {
+  margin-left: 23%;
+  padding: 20px; /* Add some padding for better spacing on all screens */
+}
+.aboutcontent h3 {
+  margin-top: -1rem;
+}
+.logopic {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+  align-self: center;
+  padding: 3px;
+  background-color: white;
+}
+.education {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  height: 240px;
+  width: 300px;
+  margin: 25px;
+}
+.education:hover {
+  scale: 1.09;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.educationcontainer {
+  margin: 10px;
+}
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+.boldtext {
+  font-weight: bold;
+}
+.educationheading {
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1024px (e.g., tablets and smaller laptops) */
+@media (max-width: 1024px) {
+  .aboutcontent {
+    margin-left: 10%; /* Adjust margin for smaller screens */
+    padding: 15px;
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait mode) */
+@media (max-width: 768px) {
+  .aboutcontent {
+    margin-left: 5%; /* Further reduce margin */
+    margin-right: 5%;
+    padding: 10px;
+  }
+  .aboutcontent h1,
+  .aboutcontent h3,
+  .aboutcontent p {
+    text-align: center; /* Center align text for smaller screens */
+  }
+  .aboutcontent br {
+    display: none; /* Hide <br> tags to prevent awkward line breaks on small screens */
+  }
+  .containers {
+    flex-direction: column; /* Stack education cards vertically */
+  }
+  .education {
+    width: 90%; /* Make education cards take more width */
+    margin: 15px auto; /* Center cards with auto margins */
+    height: auto; /* Adjust height automatically based on content */
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .aboutcontent {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5px;
+  }
+  .aboutcontent h1 {
+    font-size: 1.5rem; /* Adjust heading size for very small screens */
+  }
+  .aboutcontent h3 {
+    font-size: 1rem; /* Adjust subheading size */
+    margin-top: 0.5rem; /* Reduce top margin */
+  }
+  .aboutcontent p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+  .education {
+    width: 95%; /* Even wider for mobile */
+    margin: 10px auto;
+  }
+  .logopic {
+    height: 50px;
+    width: 50px;
+  }
+}
