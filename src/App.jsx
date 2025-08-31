@@ -1,31 +1,59 @@
 import './App.css'
 import About from './components/about/about';
 import Home from './components/homepage/home';
-import {BrowserRouter, Routes, Route} from 'react-router'
 import Skills from './components/skill/skills';
 import Myworks from './components/myworks/works';
 import ContactMe from './components/contactme/contactme.jsx';
-function App() {
-  
 
+// 👇 import HashRouter instead of BrowserRouter
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
+function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={
-        <protectedRoute>
-        <Home />
-        </protectedRoute>
-        }></Route>
-      <Route path="/about" element={
-        <protectedRoute>
-        <About />
-        </protectedRoute>
-        }></Route>
-      <Route path="/skills" element={<protectedRoute><Skills /></protectedRoute>}></Route>
-      <Route path="/myworks" element={<protectedRoute><Myworks /></protectedRoute>} ></Route>
-      <Route path="/contactme" element={<protectedRoute><ContactMe/></protectedRoute>}></Route>
-    </Routes>
-  </BrowserRouter>
+    <HashRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/skills"
+          element={
+            <ProtectedRoute>
+              <Skills />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/myworks"
+          element={
+            <ProtectedRoute>
+              <Myworks />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/contactme"
+          element={
+            <ProtectedRoute>
+              <ContactMe />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </HashRouter>
   )
 }
 
