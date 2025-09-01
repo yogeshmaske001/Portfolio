@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import About from '../about/about.jsx';
 import Skills from '../skill/skills.jsx';
 import Myworks from '../myworks/works.jsx';
- 
+  
 
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
             </button>
           </div>
           <div>
-            <img src="/assets/Images/Lindin photo.jpg" alt="Profile" className='profilepic' />
+            <img src="https://res.cloudinary.com/dtna1lnxi/image/upload/v1756717056/Lindin_photo_i7nekl.jpg"alt="Profile" className='profilepic' />
           </div>
         </div>
       </div>
