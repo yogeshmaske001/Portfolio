@@ -9,7 +9,7 @@ function App() {
   
 
   return (
-    <HashRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={
         <protectedRoute>
@@ -25,7 +25,7 @@ function App() {
       <Route path="/myworks" element={<protectedRoute><Myworks /></protectedRoute>} ></Route>
       <Route path="/contactme" element={<protectedRoute><ContactMe/></protectedRoute>}></Route>
     </Routes>
-  </HashRouter>
+  </BrowserRouter>
   )
 }
 
