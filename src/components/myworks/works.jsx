@@ -25,7 +25,7 @@ const Myworks = () => {
            Includes a progress bar to track task completion and confetti animation for celebrations.
            Designed with a responsive, user-friendly UI for smooth task management.
           </p>
-          <p><a className="prolink" href="https://yogeshmaske001.github.io/To-Do-List/           " target="blank">Source Code</a></p>
+          <p><a className="prolink" href="https://yogeshmaske001.github.io/To-Do-List/           " target="blank">View project</a></p>
         </div>
         <div className="project">
           <h2 className="projectname">Weather App</h2>
