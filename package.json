@@ -1,8 +1,10 @@
 {
   "name": "portfolio",
+  "homepage": "https://yogeshmaske001.github.io/Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
    "scripts": {
     "dev": "vite",
     "build": "vite build",
